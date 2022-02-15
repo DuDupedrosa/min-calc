@@ -34,7 +34,8 @@ const getValueTotalPrice = (event) => {
         "R$ " + (getValueOFInput - 0.05 * getValueOFInput);
 
       // show discount
-      getShowTotalDiscounts.innerHTML = "R$ " + getValueOFInput * 0.05;
+      getShowTotalDiscounts.innerHTML =
+        "R$ " + (getValueOFInput * 0.05).toFixed(2);
 
       // case occur the discount and division of people start this code
       const getValueOfPeople = document.getElementById("input-people");
@@ -54,7 +55,8 @@ const getValueTotalPrice = (event) => {
         "R$ " + (getValueOFInput - 0.1 * getValueOFInput);
 
       // show discount
-      getShowTotalDiscounts.innerHTML = "R$ " + getValueOFInput * 0.1;
+      getShowTotalDiscounts.innerHTML =
+        "R$ " + (getValueOFInput * 0.1).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
@@ -74,7 +76,8 @@ const getValueTotalPrice = (event) => {
         "R$ " + (getValueOFInput - 0.15 * getValueOFInput);
 
       // show discount
-      getShowTotalDiscounts.innerHTML = "R$ " + getValueOFInput * 0.15;
+      getShowTotalDiscounts.innerHTML =
+        "R$ " + (getValueOFInput * 0.15).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
@@ -94,7 +97,8 @@ const getValueTotalPrice = (event) => {
         "R$ " + (getValueOFInput - 0.25 * getValueOFInput);
 
       // show discount
-      getShowTotalDiscounts.innerHTML = "R$ " + getValueOFInput * 0.25;
+      getShowTotalDiscounts.innerHTML =
+        "R$ " + (getValueOFInput * 0.25).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
@@ -114,7 +118,8 @@ const getValueTotalPrice = (event) => {
         "R$ " + (getValueOFInput - 0.5 * getValueOFInput);
 
       // show discount
-      getShowTotalDiscounts.innerHTML = "R$ " + getValueOFInput * 0.5;
+      getShowTotalDiscounts.innerHTML =
+        "R$ " + (getValueOFInput * 0.5).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
