@@ -9,7 +9,12 @@ const getPeople = document.getElementById("input-people");
 // function that active all events
 const getValueTotalPrice = (event) => {
   // first event is to show the value in the span
-  const getValueOFInput = +event.target.value;
+  // clean to value of input because was giving NaN because had a ',' in place
+  // of '.'
+  // that's why use replace to substitute ',' for '.'
+  const getValueOFInput = event.target.value;
+  const cleanValurOfInput = getValueOFInput.replace(",", ".");
+  const transformToNumber = +cleanValurOfInput;
   getShowTotalPrice.innerHTML = "R$ " + getValueOFInput;
 
   // case not occur the action in the button's discounts occur the division
@@ -18,7 +23,7 @@ const getValueTotalPrice = (event) => {
   const initDivisionOfPeople = (event) => {
     const getPeopleValue = +event.target.value;
     getShowTotalPrice.innerHTML =
-      "R$ " + (getValueOFInput / getPeopleValue).toFixed(2);
+      "R$ " + (transformToNumber / getPeopleValue).toFixed(2);
   };
   getValueOfPeople.addEventListener("change", initDivisionOfPeople);
 
@@ -31,11 +36,11 @@ const getValueTotalPrice = (event) => {
   const discountsMethods = {
     cincoPorcento() {
       getShowTotalPrice.innerHTML =
-        "R$ " + (getValueOFInput - 0.05 * getValueOFInput);
+        "R$ " + (transformToNumber - 0.05 * transformToNumber).toFixed(2);
 
       // show discount
       getShowTotalDiscounts.innerHTML =
-        "R$ " + (getValueOFInput * 0.05).toFixed(2);
+        "R$ " + (transformToNumber * 0.05).toFixed(2);
 
       // case occur the discount and division of people start this code
       const getValueOfPeople = document.getElementById("input-people");
@@ -44,19 +49,20 @@ const getValueTotalPrice = (event) => {
         const getPeopleValue = +event.target.value;
         getShowTotalPrice.innerHTML =
           "R$ " +
-          ((getValueOFInput - 0.05 * getValueOFInput) / getPeopleValue).toFixed(
-            2
-          );
+          (
+            (transformToNumber - 0.05 * transformToNumber) /
+            getPeopleValue
+          ).toFixed(2);
       };
       getValueOfPeople.addEventListener("change", initDivisionOfPeople);
     },
     dezPorcento() {
       getShowTotalPrice.innerHTML =
-        "R$ " + (getValueOFInput - 0.1 * getValueOFInput);
+        "R$ " + (transformToNumber - 0.1 * transformToNumber).toFixed(2);
 
       // show discount
       getShowTotalDiscounts.innerHTML =
-        "R$ " + (getValueOFInput * 0.1).toFixed(2);
+        "R$ " + (transformToNumber * 0.1).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
@@ -65,19 +71,20 @@ const getValueTotalPrice = (event) => {
         const getPeopleValue = +event.target.value;
         getShowTotalPrice.innerHTML =
           "R$ " +
-          ((getValueOFInput - 0.1 * getValueOFInput) / getPeopleValue).toFixed(
-            2
-          );
+          (
+            (transformToNumber - 0.1 * transformToNumber) /
+            getPeopleValue
+          ).toFixed(2);
       };
       getValueOfPeople.addEventListener("change", initDivisionOfPeople);
     },
     quinzePorcento() {
       getShowTotalPrice.innerHTML =
-        "R$ " + (getValueOFInput - 0.15 * getValueOFInput);
+        "R$ " + (transformToNumber - 0.15 * transformToNumber).toFixed(2);
 
       // show discount
       getShowTotalDiscounts.innerHTML =
-        "R$ " + (getValueOFInput * 0.15).toFixed(2);
+        "R$ " + (transformToNumber * 0.15).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
@@ -86,19 +93,20 @@ const getValueTotalPrice = (event) => {
         const getPeopleValue = +event.target.value;
         getShowTotalPrice.innerHTML =
           "R$ " +
-          ((getValueOFInput - 0.15 * getValueOFInput) / getPeopleValue).toFixed(
-            2
-          );
+          (
+            (transformToNumber - 0.15 * transformToNumber) /
+            getPeopleValue
+          ).toFixed(2);
       };
       getValueOfPeople.addEventListener("change", initDivisionOfPeople);
     },
     vinteCincoPorcento() {
       getShowTotalPrice.innerHTML =
-        "R$ " + (getValueOFInput - 0.25 * getValueOFInput);
+        "R$ " + (transformToNumber - 0.25 * transformToNumber).toFixed(2);
 
       // show discount
       getShowTotalDiscounts.innerHTML =
-        "R$ " + (getValueOFInput * 0.25).toFixed(2);
+        "R$ " + (transformToNumber * 0.25).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
@@ -107,19 +115,20 @@ const getValueTotalPrice = (event) => {
         const getPeopleValue = +event.target.value;
         getShowTotalPrice.innerHTML =
           "R$ " +
-          ((getValueOFInput - 0.25 * getValueOFInput) / getPeopleValue).toFixed(
-            2
-          );
+          (
+            (transformToNumber - 0.25 * transformToNumber) /
+            getPeopleValue
+          ).toFixed(2);
       };
       getValueOfPeople.addEventListener("change", initDivisionOfPeople);
     },
     cinquentaPorcento() {
       getShowTotalPrice.innerHTML =
-        "R$ " + (getValueOFInput - 0.5 * getValueOFInput);
+        "R$ " + (transformToNumber - 0.5 * transformToNumber).toFixed(2);
 
       // show discount
       getShowTotalDiscounts.innerHTML =
-        "R$ " + (getValueOFInput * 0.5).toFixed(2);
+        "R$ " + (transformToNumber * 0.5).toFixed(2);
 
       // caso tenha divisao de pessoas vai ocorrer esse código
       const getValueOfPeople = document.getElementById("input-people");
@@ -128,16 +137,17 @@ const getValueTotalPrice = (event) => {
         const getPeopleValue = +event.target.value;
         getShowTotalPrice.innerHTML =
           "R$ " +
-          ((getValueOFInput - 0.5 * getValueOFInput) / getPeopleValue).toFixed(
-            2
-          );
+          (
+            (transformToNumber - 0.5 * transformToNumber) /
+            getPeopleValue
+          ).toFixed(2);
       };
       getValueOfPeople.addEventListener("change", initDivisionOfPeople);
     },
   };
 
   // case occur click in the button of discounts start this action
-  const getInputOFDiscounts = document.querySelectorAll("#discounts input");
+  const getInputOFDiscounts = document.querySelectorAll("#discounts button");
 
   const initValueDiscounts = (event) => {
     const nameOfInput = event.target.name;
