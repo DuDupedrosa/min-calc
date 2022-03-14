@@ -12,58 +12,61 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 
-  <!-- links css -->
+  <!-- links css / icon -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="preload" href="./css/style.min.css" as="style">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
-  <section class="mg-left-right">
-    <div class="container">
-      <div class="intern-container">
-        <div class="grid-intern">
-          <div class="intern-width-max">
-            <div class="all-value-initial">
-              <h1 class="title">Valor total</h1>
-              <form id="all-value">
-                <img src="./img/icon-dollar.svg" alt="" class="icon-dollar">
-                <input type="text" name="price" id="input-initial" class="input-style">
-              </form>
-            </div>
-            <div class="discounts-input">
-              <h2 class="title">Porcentagem de desconto</h2>
-              <div id="discounts">
-                <button name="cincoPorcento">5%</button>
-                <button name="dezPorcento">10%</button>
-                <button name="quinzePorcento">15%</button>
-                <button name="vinteCincoPorcento">25%</button>
-                <button name="cinquentaPorcento">50%</button>
-                <button name="" id="others">Outros</button>
+  <main>
+    <section class="mg-left-right">
+      <div class="container">
+        <div class="intern-container">
+          <div class="grid-intern">
+            <div class="intern-width-max">
+              <div class="all-value-initial">
+                <h1 class="title">Valor total</h1>
+                <form id="all-value">
+                  <img src="./img/icon-dollar.svg" alt="" class="icon-dollar">
+                  <input type="text" name="price" id="input-initial" class="input-style">
+                </form>
+              </div>
+              <div class="discounts-input">
+                <h2 class="title">Porcentagem de desconto</h2>
+                <div id="discounts">
+                  <button name="cincoPorcento">5%</button>
+                  <button name="dezPorcento">10%</button>
+                  <button name="quinzePorcento">15%</button>
+                  <button name="vinteCincoPorcento">25%</button>
+                  <button name="cinquentaPorcento">50%</button>
+                  <button name="" id="others">Outros</button>
+                </div>
+              </div>
+              <div class="people-input">
+                <h2 class="title">Numero de pessoas</h2>
+                <form id="people">
+                  <img src="./img/icon-person.svg" alt="" class="icon-people">
+                  <input type="text" name="people" id="input-people" class="input-style">
+                </form>
               </div>
             </div>
-            <div class="people-input">
-              <h2 class="title">Numero de pessoas</h2>
-              <form id="people">
-                <img src="./img/icon-person.svg" alt="" class="icon-people">
-                <input type="text" name="people" id="input-people" class="input-style">
-              </form>
-            </div>
-          </div>
-          <div class="show-price">
-            <div class="show-price-container">
-              <div class="show-discounts">
-                <h2 class="show-price-title"><span class="show-price-span">Desconto</span><span id="showTotaldiscount"> R$ 00,00</span></h2>
+            <div class="show-price">
+              <div class="show-price-container">
+                <div class="show-discounts">
+                  <h2 class="show-price-title"><span class="show-price-span">Desconto</span><span id="showTotaldiscount"> R$ 00,00</span></h2>
+                </div>
+                <div class="show-all">
+                  <h2 class="show-price-title"><span class="show-price-span show-span-all">total</span><span id="showTotalPrice"> R$ 00,00</span></h2>
+                </div>
+                <button class="input-zerar" data-button="clean">Zerar</button>
               </div>
-              <div class="show-all">
-                <h2 class="show-price-title"><span class="show-price-span show-span-all">total</span><span id="showTotalPrice"> R$ 00,00</span></h2>
-              </div>
-              <button class="input-zerar" data-button="clean">Zerar</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
   <script src="./main.js"></script>
 </body>
 
